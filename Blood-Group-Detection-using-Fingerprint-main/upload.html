@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff4d6d, #ff758c);
+        }
+        .upload-container {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .upload-container h2 {
+            color: #ff4d6d;
+            margin-bottom: 15px;
+        }
+        .file-input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .upload-btn {
+            width: 100%;
+            padding: 10px;
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .upload-btn:hover {
+            background: #e63950;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="upload-container">
+        <h2>Upload Image</h2>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" class="file-input" accept="image/*" required>
+            <button type="submit" class="upload-btn">Upload</button>
+        </form>
+    </div>
+
+</body>
+</html>
